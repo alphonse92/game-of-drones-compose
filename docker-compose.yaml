@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+    mongo:
+        image: 'mongo:latest'
+        volumes: 
+            - mongodata:/data/configdb
+        ports:
+          - '27017:27017'
+    api:
+        build: express-api-boilerplate
+        command: npm run-script startDev
+        volumes:
+            - ./express-api-boilerplate:/usr/src/app
+        ports:
+          - '1337:1337'
+        depends_on:
+            - mongo
+        environment:
+          NODE_PATH: .
+          HOST: localhost
+          PORT: 1337
+          NODE_ENV: development
+          SYSTEM_CORES: 1
+          MONGO: mongodb://mongo:27017/api-express-boilerplate
+          TOKEN_SECRET: secret
+volumes:
+    mongodata:

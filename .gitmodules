@@ -1,0 +1,7 @@
+[submodule "game-of-drones-client"]
+	path = game-of-drones-client
+	url = https://github.com/alphonse92/game-of-drones-client
+
+[submodule "game-of-drones-api"]
+	path = game-of-drones-api
+	url = https://github.com/alphonse92/game-of-drones-api

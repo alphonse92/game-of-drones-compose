@@ -7,10 +7,10 @@ services:
         ports:
           - '27017:27017'
     api:
-        build: express-api-boilerplate
+        build: game-of-drones-api
         command: npm run-script startDev
         volumes:
-            - ./express-api-boilerplate:/usr/src/app
+            - ./game-of-drones-api:/usr/src/app
         ports:
           - '1337:1337'
         depends_on:
@@ -21,7 +21,7 @@ services:
           PORT: 1337
           NODE_ENV: development
           SYSTEM_CORES: 1
-          MONGO: mongodb://mongo:27017/api-express-boilerplate
+          MONGO: mongodb://mongo:27017/game-of-drones-api
           TOKEN_SECRET: secret
 volumes:
     mongodata:

@@ -4,6 +4,7 @@ Game of drones is an fun game about rock scisor and paper.
 #TL;TR
 
 ```
+# you need node, angular cli, docker and mocha installed
 git clone https://github.com/alphonse92/game-of-drones-compose.git
 sh install.sh
 sh start_api.sh
@@ -15,9 +16,12 @@ sh start_client.sh
 1. Node Js
 2. Angular CLI
 3. Docker
-4. Mocha (unit test framework)
+4. Mocha (as npm global package)
 
 ## Installation
+
+Please make sure you have all needed software before install, run and test.
+
 ### Using the installer script
 ```
 git clone https://github.com/alphonse92/game-of-drones-compose.git

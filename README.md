@@ -82,8 +82,7 @@ node server.js
 **IMPORTANT** 
 
 1. Run the api with docker-compose-test-yaml file or you will dump your database!
-2. You need pass the mongo db uri via env 
-3. If you want to test the API more than one time, you need reboot the api container
+2. If you want to test the API more than one time, you need reboot the api container
 
 
 #### Api
@@ -93,5 +92,3 @@ docker-compose -f docker-compose-test.yaml up api
 cd game-of-drones-api
 mocha test
 ```
-
-#### Client

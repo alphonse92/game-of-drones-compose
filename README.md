@@ -15,6 +15,7 @@ sh start_client.sh
 1. Node Js
 2. Angular CLI
 3. Docker
+4. Mocha (unit test framework)
 
 ## Installation
 ### Using the installer script
@@ -70,3 +71,15 @@ docker-compose up api
 cd game-of-drones-client
 node server.js
 ```
+
+
+### Testing
+####Api
+After install, stop the cluster.
+```
+docker-compose -f docker-compose-test.yaml up api
+cd game-of-drones-api
+mocha test
+```
+
+####Client

@@ -74,7 +74,7 @@ node server.js
 
 
 ### Testing
-####Api
+#### Api
 After install, stop the cluster.
 ```
 docker-compose -f docker-compose-test.yaml up api
@@ -82,4 +82,4 @@ cd game-of-drones-api
 mocha test
 ```
 
-####Client
+#### Client

@@ -78,8 +78,12 @@ node server.js
 
 
 ### Testing
+
+**IMPORTANT** 
+Run the api with docker-compose-test-yaml file or you will dump your database!
+
 #### Api
-After install, stop the cluster.
+After install and run, stop the cluster.
 ```
 docker-compose -f docker-compose-test.yaml up api
 cd game-of-drones-api

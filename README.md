@@ -80,7 +80,11 @@ node server.js
 ### Testing
 
 **IMPORTANT** 
-Run the api with docker-compose-test-yaml file or you will dump your database!
+
+1. Run the api with docker-compose-test-yaml file or you will dump your database!
+2. You need pass the mongo db uri via env 
+3. If you want to test the API more than one time, you need reboot the api container
+
 
 #### Api
 After install and run, stop the cluster.

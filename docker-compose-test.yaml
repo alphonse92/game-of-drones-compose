@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+    mongo:
+        image: 'mongo:latest'
+        volumes: 
+            - mongodata:/data/configdb
+        ports:
+          - '27017:27017'
+    api:
+        build: game-of-drones-api
+        command: npm run-script startDev
+        volumes:
+            - ./game-of-drones-api:/usr/src/app
+        ports:
+          - '1337:1337'
+        depends_on:
+            - mongo
+        environment:
+          NODE_PATH: .
+          HOST: localhost
+          PORT: 1337
+          NODE_ENV: test
+          SYSTEM_CORES: 1
+          MONGO: mongodb://mongo:27017/game-of-drones-test
+          TOKEN_SECRET: secret
+volumes:
+    mongodata:

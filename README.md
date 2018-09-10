@@ -1,7 +1,7 @@
 # Description
 Game of drones is an fun game about rock scisor and paper. 
 
-#TL;TR
+# TL;TR
 
 ```
 # you need node, angular cli, docker and mocha installed
